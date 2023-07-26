@@ -26,7 +26,8 @@ function card(data) {
 const getData = async () => {
   // https://forbes400.onrender.com/api/forbes400/{?limit=10}
   // const URL = `https://forbes400.onrender.com/api/forbes400/?limit=10`;
-  const URL = `${window.location.origin}/api/data.json`;
+  const URL = `https://raw.githubusercontent.com/sheik-mostafizur/billionaire-diary-phb7/main/api/data.json`;
+  console.log(URL);
   const fetched = await fetch(URL);
   const data = await fetched.json();
   showRichestPeopleItems(data);
